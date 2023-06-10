@@ -1,0 +1,8 @@
+name: Output event name
+on: issues
+jobs:
+  output_triggered:
+    runs-on: windows-latest
+    steps:
+      - name: Echo event name
+        run: echo "${{ github.event_name }}"
