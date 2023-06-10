@@ -1,4 +1,5 @@
 import "./HelpArea.css";
+import HelpBox from "./HelpBox";
 
 const HELP_ITEMS = [
   {
@@ -22,10 +23,7 @@ function HelpArea() {
   return (
     <section data-testid="help-area" id="help-area">
       {HELP_ITEMS.map((item) => (
-        <article key={item.id}>
-          <h2>{item.title}</h2>
-          <p>{item.text}</p>
-        </article>
+        <HelpBox key={item.id} title={item.title} text={item.text} />
       ))}
     </section>
   );
